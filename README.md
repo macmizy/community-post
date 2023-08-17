@@ -4,8 +4,10 @@ A dummy backend to handle the community posts, comments and  likes of Happyhub (
 URL = https://happyhub-community.onrender.com
 
 # POST MESSAGE ENDPONT
-URL = https://happyhub-community.onrender.com/message
-REQUEST = { text: I'm on the verge of commiting suicide, somebody save me}
+URL = https://happyhub-community.onrender.com/message \
+REQUEST = {
+  "text": "I'm on the verge of commiting suicide, somebody save me "
+} \
 RESPONSE = {
   "message": {
     "text": "I'm on the verge of commiting suicide, somebody save me ",
@@ -15,14 +17,14 @@ RESPONSE = {
     "__v": 0
   },
   "status": "true"
-}
+} 
 
 # POST COMMENT ENDPOINT
-URL = http://localhost:3000/comment/64dd26d6f4d47cedfb3c30b8
-METHOD = POST
+URL = http://localhost:3000/comment/64dd26d6f4d47cedfb3c30b8 \
+METHOD = POST \
 REQUEST = {
   "text": "pls don't do it, its not worth it "
-}
+} \
 RESPONSE = {
   "message": {
     "_id": "64dd26d6f4d47cedfb3c30b8",
@@ -36,11 +38,11 @@ RESPONSE = {
     "text": "pls don't do it, its not worth it ",
     "_id": "64dd29d7128502b48e919e85",
     "__v": 0
-  }
+  } 
 
 
 # POST LIKES ENDPOINT
-METHOD = PUT
+METHOD = PUT \
 RESPONSE = {
   "_id": "64dd26d6f4d47cedfb3c30b8",
   "text": "I'm on the verge of commiting suicide, somebody save me ",
@@ -52,7 +54,7 @@ RESPONSE = {
 }
 
 # GET ALL POST
-METHOD = GET
+METHOD = GET \
 RESPONSE = {
   "message": "Messages fetched successfully",
   "status": "true",
@@ -83,7 +85,7 @@ RESPONSE = {
 }
 
 # GET SINGLE MESSAGE
-METHOD = GET 
+METHOD = GET \
 RESPOSE = {
   "message": {
     "_id": "64dd26d6f4d47cedfb3c30b8",
@@ -102,7 +104,7 @@ RESPOSE = {
 }
 
 # DELETE MESSAGE
-METHOD = DELETE 
+METHOD = DELETE \
 RESPONSE = {
   "message": {
     "_id": "64dd26d6f4d47cedfb3c30b8",
@@ -117,7 +119,7 @@ RESPONSE = {
 }
 
 # DELETE COMMENT 
-METHOD = DELETE
+METHOD = DELETE \
 PESPONSE = {
   "message": "Comment deleted successfully",
   "status": "true",
